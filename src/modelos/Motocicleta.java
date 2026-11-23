@@ -2,6 +2,7 @@ public class Motocicleta extends Vehiculo {
     
     private Integer cilindrada;
     private TipoMoto tipoMoto;
+    private static final long serialVersionUID = 1L;
 
     public Motocicleta(){
         super();

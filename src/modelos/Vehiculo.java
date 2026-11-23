@@ -1,8 +1,8 @@
-
+import java.io.Serializable;
 import java.time.Year;
 import java.util.Objects;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Serializable {
     private Integer id;
     private String marca;
     private String modelo;
@@ -12,6 +12,7 @@ public abstract class Vehiculo {
     private Integer kilometraje;
     private Condicion condicion;
     private EstadoStock estadoStock;
+    private static final long serialVersionUID = 1L;
 
     //#region Constructores
     public Vehiculo() {

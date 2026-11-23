@@ -1,5 +1,8 @@
 public class Automovil extends Vehiculo {
+    
+    private static final long serialVersionUID = 1L;
     private TipoCarroceria tipoCarroceria;
+
 
     public Automovil(){
         super();

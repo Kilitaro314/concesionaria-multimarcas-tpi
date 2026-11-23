@@ -3,6 +3,7 @@ public class Camioneta extends Vehiculo {
     private Integer capacidadCarga;
     private TipoCabina tipoCabina;
     private TipoTraccion traccion;
+    private static final long serialVersionUID = 1L;
 
     public Camioneta(){
         super();
