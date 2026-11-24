@@ -1,4 +1,5 @@
 package modelos;
+
 public enum TipoCarroceria {
     SEDAN,
     HATCHBACK,

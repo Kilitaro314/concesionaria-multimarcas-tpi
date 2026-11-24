@@ -1,4 +1,5 @@
 package modelos;
+
 import java.io.Serializable;
 import java.time.Year;
 import java.util.Objects;
@@ -16,9 +17,11 @@ public abstract class Vehiculo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     //#region Constructores
+    /** Crea una instancia de Vehiculo. */
     public Vehiculo() {
     }
 
+    /** Crea una instancia de Vehiculo. */
     public Vehiculo(Integer id, String marca, 
         String modelo, Integer anio, 
         String color, Double precio, 
@@ -40,44 +43,54 @@ public abstract class Vehiculo implements Serializable {
     //#endregion
 
     //#region Getters
+    /** Devuelve identificador. */
     public Integer getId() {
         return id;
     }
 
+    /** Devuelve marca. */
     public String getMarca() {
         return marca;
     }
 
+    /** Devuelve modelo. */
     public String getModelo() {
         return modelo;
     }
 
+    /** Devuelve año. */
     public Integer getAnio() {
         return anio;
     }
 
+    /** Devuelve color. */
     public String getColor() {
         return color;
     }
 
+    /** Devuelve precio. */
     public Double getPrecio() {
         return precio;
     }
 
+    /** Devuelve kilometraje. */
     public Integer getKilometraje() {
         return kilometraje;
     }
 
+    /** Devuelve condición. */
     public Condicion getCondicion() {
         return condicion;
     }
 
+    /** Devuelve estado de stock. */
     public EstadoStock getEstadoStock() {
         return estadoStock;
     }
     //#endregion
 
     //#region Setters
+    /** Establece el identificador. */
     public final void setId(Integer id) {
         if (id != null && id <= 0) {
             throw new IllegalArgumentException("El ID debe ser positivo");
@@ -85,6 +98,7 @@ public abstract class Vehiculo implements Serializable {
         this.id = id;
     }
 
+    /** Establece el valor de marca. */
     public final void setMarca(String marca) {
         if (marca == null || marca.isBlank()) {
             throw new IllegalArgumentException("La marca no puede ser nula o vacía");
@@ -92,6 +106,7 @@ public abstract class Vehiculo implements Serializable {
         this.marca = marca;
     }
 
+    /** Establece el valor de modelo. */
     public final void setModelo(String modelo) {
         if (modelo == null || modelo.isBlank()) {
             throw new IllegalArgumentException("El modelo no puede ser nulo o vacío");
@@ -99,6 +114,7 @@ public abstract class Vehiculo implements Serializable {
         this.modelo = modelo;
     }
 
+    /** Establece el año. */
     public final void setAnio(Integer anio) {
         int anioActual = Year.now().getValue();
 
@@ -110,6 +126,7 @@ public abstract class Vehiculo implements Serializable {
         this.anio = anio;
     }
 
+    /** Establece el valor de color. */
     public final void setColor(String color) {
         if (color == null || color.isBlank()) {
             throw new IllegalArgumentException("El color no puede ser nulo o vacío");
@@ -117,6 +134,7 @@ public abstract class Vehiculo implements Serializable {
         this.color = color;
     }
 
+    /** Establece el valor de precio. */
     public final void setPrecio(Double precio) {
         if (precio == null || !Double.isFinite(precio) || precio < 0) {
             throw new IllegalArgumentException(
@@ -126,6 +144,7 @@ public abstract class Vehiculo implements Serializable {
         this.precio = precio;
     }
 
+    /** Establece el valor de kilometraje. */
     public final void setKilometraje(Integer kilometraje) {
         if (kilometraje == null || kilometraje < 0) {
             throw new IllegalArgumentException(
@@ -137,6 +156,7 @@ public abstract class Vehiculo implements Serializable {
         validarKilometrajeYCondicion();
     }
 
+    /** Establece la condición. */
     public final void setCondicion(Condicion condicion) {
         if (condicion == null) {
             throw new IllegalArgumentException(
@@ -148,6 +168,7 @@ public abstract class Vehiculo implements Serializable {
         validarKilometrajeYCondicion();
     }
 
+    /** Establece el estado de stock. */
     public final void setEstadoStock(EstadoStock estadoStock) {
         if (estadoStock == null) {
             throw new IllegalArgumentException(
@@ -159,6 +180,7 @@ public abstract class Vehiculo implements Serializable {
     //#endregion
 
     //#region Validaciones
+    /** Valida la consistencia entre kilometraje y condición. */
     private void validarKilometrajeYCondicion() {
         if (condicion == null || kilometraje == null) {
             return; // Si alguno todavía no se cargó, no valido nada y salgo
@@ -172,6 +194,7 @@ public abstract class Vehiculo implements Serializable {
     }
     //#endregion
 
+    /** Compara esta instancia con otro objeto. */
     @Override 
     public boolean equals(Object obj){
         if (obj == this) return true;
@@ -180,11 +203,13 @@ public abstract class Vehiculo implements Serializable {
         return id != null && Objects.equals(id, otro.id);
     }
 
+    /** Calcula el código hash de esta instancia. */
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
+    /** Devuelve una descripción textual de esta instancia. */
     @Override
     public String toString() {
         return "id=" + id +
@@ -197,4 +222,5 @@ public abstract class Vehiculo implements Serializable {
                 ;
     }
 }
+
 

@@ -32,6 +32,7 @@ public class Motocicleta extends Vehiculo {
     //#endregion
 
     //#region Setters
+    /** Establece el valor de cilindrada. */
     public final void setCilindrada(Integer cilindrada) {
         if (cilindrada == null || cilindrada <= 0){
             throw new IllegalArgumentException("La cilindrada debe ser un valor positivo");
@@ -39,6 +40,7 @@ public class Motocicleta extends Vehiculo {
         this.cilindrada = cilindrada;
     }
 
+    /** Establece el tipo de motocicleta. */
     public final void setTipoMoto(TipoMoto tipoMoto) {
         if (tipoMoto == null){
             throw new IllegalArgumentException("El tipo de moto no puede ser null");
@@ -47,6 +49,7 @@ public class Motocicleta extends Vehiculo {
     }
     //#endregion
 
+    /** Devuelve una descripción textual de esta instancia. */
     @Override
     public String toString() {
         return "Motocicleta{" +

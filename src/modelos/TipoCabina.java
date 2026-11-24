@@ -1,6 +1,7 @@
 package modelos;
+
 public enum TipoCabina {
-    SIMLE,
+    SIMPLE,
     EXTENDIDA,
     DOBLE
 }
