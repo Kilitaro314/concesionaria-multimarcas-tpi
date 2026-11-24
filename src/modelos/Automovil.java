@@ -1,3 +1,4 @@
+package modelos;
 public class Automovil extends Vehiculo {
     
     private static final long serialVersionUID = 1L;
