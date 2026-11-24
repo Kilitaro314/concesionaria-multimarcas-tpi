@@ -1,3 +1,4 @@
+package modelos;
 public class Motocicleta extends Vehiculo {
     
     private Integer cilindrada;
