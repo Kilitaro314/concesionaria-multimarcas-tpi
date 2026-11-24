@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Archivos generados al compilar
+target/
+out/
+data/*.csv
+data/*.txt
+
+# Inventario serializado de ejemplo para la entrega
+!data/vehiculos.txt

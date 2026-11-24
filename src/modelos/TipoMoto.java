@@ -1,4 +1,5 @@
 package modelos;
+
 public enum TipoMoto {
     CALLE,      // O Urbana / Naked
     DEPORTIVA,
