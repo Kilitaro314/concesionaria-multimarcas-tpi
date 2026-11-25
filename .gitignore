@@ -32,5 +32,10 @@ data/*.txt
 # Inventario serializado de ejemplo para la entrega
 !data/vehiculos.txt
 
-# Inventario generado al ejecutar
-inventario.dat
+.idea/
+.vscode
+# Configuraciones locales de ejecución de IntelliJ IDEA
+.run/
+
+# Configuración local del módulo de IntelliJ IDEA
+concesionaria-multimarcas-tpi.iml
